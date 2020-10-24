@@ -10,7 +10,7 @@ const Home = () => {
         <SafeAreaView style={{backgroundColor:'white', flex: 1}}>
             <ScrollView style={{backgroundColor:'#f9f9f9'}}> 
              {/* Main Content */}
-                <View > 
+                <View> 
                     <View style={styles.banner}>
                         <View style={{marginHorizontal: -196, flexDirection:'row'}}>    
                             <Image style={styles.bannerImage}source={require('../../Assets/Image/Banner1.png')} />
@@ -27,14 +27,41 @@ const Home = () => {
                             <View style={{width:8 ,height:8 , borderRadius:60 , backgroundColor:'#f2f2f2', marginRight:4}}/>
                         </View>
                     </View>
-
-                    
-
                 </View>  
 
-                <View style={styles.GlobalMargin}>
-                    <View />
+                    <View style={styles.launcher}>
+                        <View />
+                    </View>
+
+                <View style={styles.content}>
+                    <Text style={{
+                        fontSize:12,
+                        fontWeight:'bold',
+                         marginTop:15,
+                         marginLeft:20,
+                        //  fontFamily:'Poppins',
+                         }}>Hai Jeremy, lagi perlu di daerah mana?</Text>
+                    <View style={{marginLeft:20,flexDirection:'row'}}>
+                    <Image style={styles.contentImage}source={require('../../Assets/Image/Jakarta.png')} />
+                    <Image style={styles.contentImage}source={require('../../Assets/Image/Daerah2.png')} />
+                    <Image style={styles.contentImage}source={require('../../Assets/Image/Daerah3.png')} />
+                    <Image style={styles.contentImage}source={require('../../Assets/Image/Daerah4.png')} />
+                    </View>
                 </View>
+
+                <View style={styles.content}>
+                    <Text style={{
+                        fontSize:12,
+                        fontWeight:'bold',
+                         marginTop:15,
+                         marginLeft:20,
+                        //  fontFamily:'Poppins',
+                         }}>Pilih kendaraan sesuai kebutuhan kamu</Text>
+
+                </View>
+
+
+                    
              
              
              
@@ -52,7 +79,7 @@ const Home = () => {
 export default Home
 
 const styles = StyleSheet.create({
-    GlobalMargin:{
+    launcher:{
         marginHorizontal:20,
         width:350,
         height:64,
@@ -60,15 +87,20 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         alignSelf:'center',
         backgroundColor:'white',
+        borderColor:'#E0E0E0',
+        borderWidth: 0.5,
         shadowRadius:10,
-        shadowOpacity:2,
-        shadowColor:'red'
+        shadowOpacity:0.10,
+        shadowColor:'red',
     },
     banner:{
-        // marginHorizontal:22, ScrollView
-        marginVertical: 17,
+
+        marginBottom: 17,
         height: 125,
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        borderColor:'#E0E0E0',
+        borderWidth: 0.5,
+        borderTopWidth: 0,
 
     },
     bannerImage:{
@@ -84,9 +116,26 @@ const styles = StyleSheet.create({
         shadowColor:'black',
         borderColor:'#E0E0E0',
         borderWidth: 0.5
+    },
+    contentImage:{
+        marginTop:5,
+        marginRight:4,
+        height: 104,
+        width: 104,
+        shadowOpacity:8,
+        shadowRadius:20,
+        shadowColor:'black',
+        borderColor:'#E0E0E0',
+    },
+    content:{
+        marginTop: 17,
+        height: 160,
+        backgroundColor: 'white',
+        borderColor:'#E0E0E0',
+        borderWidth: 0.5,
 
-
-    }
+    },
+    
     // buttomNav: {
     //     backgroundColor:'white',
     //     height: 65,
