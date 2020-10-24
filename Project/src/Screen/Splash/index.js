@@ -7,12 +7,14 @@ const Splash = ({navigation}) => {
         setTimeout(()=>{
             navigation.replace('MainApp')
         }, 2000)
-    }
+    })
 
-    )
     return (
         <SafeAreaView>
+
+
             <Text> Splash</Text>
+            
             
         </SafeAreaView>
     )

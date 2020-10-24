@@ -5,6 +5,7 @@ import Search from './Search'
 import AuthIn from './AuthIn';
 import AuthUp from './AuthUp';
 import Mail from './Mail'
+import Setting from './Setting'
 
 
 
@@ -15,3 +16,4 @@ export {Search}
 export {AuthIn}
 export {AuthUp}
 export {Mail}
+export {Setting}
