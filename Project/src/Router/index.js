@@ -7,6 +7,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+// const Drawwer = createDrawerNavigator();
 
 const Router = () =>{
     return(
@@ -25,8 +26,10 @@ const Router = () =>{
                      )
                     }}/>
             <Stack.Screen name="Search" component={Search} options={{headerShown: false}}/>
-            <Stack.Screen name="Profile" component={Profile} options={{headerShown: false}}/>
             <Stack.Screen name="Mail" component={Mail} options={{headerShown: false}}/>
+
+            <Stack.Screen name="Profile" component={Profile} options={{headerShown: false}}/>
+
 
 
         
@@ -34,9 +37,14 @@ const Router = () =>{
     </Stack.Navigator>
     )
 }
+// const Drawwer =() =>{
+//     return(
+        
+//     )
+// }
 const MainApp =() =>{
     return(
-        <Tab.Navigator> {/* Buttom Navigation */}
+        <Tab.Navigator> 
             <Tab.Screen name="Home" 
                         component={Home} 
                         options={{
