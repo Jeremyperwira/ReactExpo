@@ -5,7 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 const Splash = ({navigation}) => {
     useEffect (() => {
         setTimeout(()=>{
-            navigation.replace('MainApp')
+            navigation.replace('AuthIn')
         }, 4000)
     })
 
@@ -18,7 +18,7 @@ const Splash = ({navigation}) => {
             <Text  style={{textAlign:'center', color:'#333333', fontSize:8, marginTop:250}}> Aplikasi Transportasi Karya Anak Bangsa</Text>
             <Text  style={{textAlign:'center', color:'#333333', fontSize:8}}> PT. Ambil Sertifikat Tbk</Text>
             <Text  style={{textAlign:'center', color:'#333333', fontSize:8}}> Versi 0.0.1 </Text>
-            <Text  style={{textAlign:'center', color:'#333333', fontSize:8}}> Github/jeremyperwira</Text>
+            <Text  style={{textAlign:'center', color:'#333333', fontSize:8}}> Github: Jeremyperwira</Text>
         </SafeAreaView>
     )
 }
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     splash:{
         justifyContent:'center',
         alignSelf:'center',
-        marginTop: 280,
+        marginTop: 300,
         alignContent: 'center',
     }
 })

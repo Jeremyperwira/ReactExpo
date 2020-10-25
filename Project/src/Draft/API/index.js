@@ -10,7 +10,7 @@ const API = () => {
     async function fetchData(){
         try{
             const res = await Axios.get(
-                'https://jsonplaceholder.typicode.com/todos/2'
+                'https://api.kawalcorona.com/positif/'
             );
             setData(res.data);
         

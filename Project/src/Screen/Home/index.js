@@ -20,8 +20,8 @@ const Home = () => {
                         </View>
 
                         <View style={{marginLeft:22 , marginTop:7 , flexDirection:'row'}}>
-                            <View style={{width:20 ,height:8 , borderRadius:60 , backgroundColor:'#F2C94C', marginRight:4}}/>
                             <View style={{width:8 ,height:8 , borderRadius:60 , backgroundColor:'#f2f2f2', marginRight:4}}/>
+                            <View style={{width:20 ,height:8 , borderRadius:60 , backgroundColor:'#F2C94C', marginRight:4}}/>
                             <View style={{width:8 ,height:8 , borderRadius:60 , backgroundColor:'#f2f2f2', marginRight:4}}/>
                             <View style={{width:8 ,height:8 , borderRadius:60 , backgroundColor:'#f2f2f2', marginRight:4}}/>
                             <View style={{width:8 ,height:8 , borderRadius:60 , backgroundColor:'#f2f2f2', marginRight:4}}/>
@@ -30,14 +30,20 @@ const Home = () => {
                 </View>  
 
                     <View style={styles.launcher}>
-                        <View />
+                        <View style={{flexDirection:'row',justifyContent:'space-between',marginHorizontal: 40, alignContent:'center'}}>
+                            <Image style={{width:27,height:36}}source={require('../../Assets/Image/ThumbPromo.png')} />
+                            <Image style={{width:24,height:36}}source={require('../../Assets/Image/ThumbKurir.png')} />
+                            <Image style={{width:24,height:36}}source={require('../../Assets/Image/ThumbKargo.png')} />
+                            <Image style={{width:31,height:36}}source={require('../../Assets/Image/ThumbLainnya.png')} />
+
+                        </View>
                     </View>
 
                 <View style={styles.content}>
                     <Text style={{
                         fontSize:12,
                         fontWeight:'bold',
-                         marginTop:15,
+                         marginTop:10,
                          marginLeft:20,
                         //  fontFamily:'Poppins',
                          }}>Hai Jeremy, lagi perlu di daerah mana?</Text>
@@ -49,14 +55,35 @@ const Home = () => {
                     </View>
                 </View>
 
-                <View style={styles.content}>
+                <View style={styles.content2}>
                     <Text style={{
                         fontSize:12,
                         fontWeight:'bold',
-                         marginTop:15,
+                         marginTop:10,
                          marginLeft:20,
                         //  fontFamily:'Poppins',
                          }}>Pilih kendaraan sesuai kebutuhan kamu</Text>
+                    <View style={{marginLeft:20,flexDirection:'row'}}>
+                         <View style={styles.contentImage2} />
+                         <View style={styles.contentImage2} />
+                         <View style={styles.contentImage2} />
+                    </View>
+
+                </View>
+
+                <View style={styles.content2}>
+                    <Text style={{
+                        fontSize:12,
+                        fontWeight:'bold',
+                         marginTop:10,
+                         marginLeft:20,
+                        //  fontFamily:'Poppins',
+                         }}>Belanja di CargoX pasti GRATIS Ongkir</Text>
+                    <View style={{marginLeft:20,flexDirection:'row'}}>
+                         <View style={styles.contentImage2} />
+                         <View style={styles.contentImage2} />
+                         <View style={styles.contentImage2} />
+                    </View>
 
                 </View>
 
@@ -79,6 +106,12 @@ const Home = () => {
 export default Home
 
 const styles = StyleSheet.create({
+    // Grid sebagai Garis Dasar //
+    grid:{  
+        borderColor:'#E0E0E0',
+        borderWidth: 0.5,
+    },
+
     launcher:{
         marginHorizontal:20,
         width:350,
@@ -92,6 +125,10 @@ const styles = StyleSheet.create({
         shadowRadius:10,
         shadowOpacity:0.10,
         shadowColor:'red',
+    },
+    thumbicon:{
+        height:36,
+        
     },
     banner:{
 
@@ -122,10 +159,7 @@ const styles = StyleSheet.create({
         marginRight:4,
         height: 104,
         width: 104,
-        shadowOpacity:8,
-        shadowRadius:20,
-        shadowColor:'black',
-        borderColor:'#E0E0E0',
+        
     },
     content:{
         marginTop: 17,
@@ -135,29 +169,26 @@ const styles = StyleSheet.create({
         borderWidth: 0.5,
 
     },
+    content2:{
+        marginTop: 17,
+        height: 180,
+        backgroundColor: 'white',
+        borderColor:'#E0E0E0',
+        borderWidth: 0.5,
+
+    },
+    contentImage2:{
+        marginTop:5,
+        marginRight:4,
+        height: 120,
+        width: 160,
+        borderRadius: 6,
+        backgroundColor: '#f4f4f4',
+        borderColor:'#E0E0E0',
+        borderWidth: 0.5,
+        
+    },
     
-    // buttomNav: {
-    //     backgroundColor:'white',
-    //     height: 65,
-    //     elevation: 6,
-    //     flexDirection: 'row',
-    //     justifyContent: 'space-around',
-        
-        
-    // },
-    // icon:{
-    //     backgroundColor:'white',
-    //     // margin:20,
-    //     flex:1,
-    //     fontSize: 10,
-    //     justifyContent: 'center',
-    //     marginHorizontal: 10
-    // },
-    // icontxt:{
-    //     fontSize:10,
-    //     fontWeight:'500',
-    //     textAlign: 'center'
-    // }
 })
 
 

@@ -3,6 +3,8 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import Router from './Router'
 
+import AuthIn from './Screen/AuthIn'
+
 const App = () => {
   return (
     <NavigationContainer>

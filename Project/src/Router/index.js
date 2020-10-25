@@ -1,47 +1,33 @@
 import React from 'react';
 import { createStackNavigator} from '@react-navigation/stack';
-import { createBottomTabNavigator} from '@react-navigation/bottom-tabs'
+import { createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
 import { Splash, AuthIn , AuthUp , Home , Search , Profile, Mail , Setting} from '../Screen';
 import { FontAwesome5 } from '@expo/vector-icons';
 
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
-// const Drawwer = createDrawerNavigator();
+const Auth = createStackNavigator();
 
 const Router = () =>{
     return(
-    <Stack.Navigator initialRouteName="Splash">    
-        <Stack.Screen name="Splash" component={Splash} options={{headerShown: false}}/>
-        
-        <Stack.Screen name="MainApp" component={MainApp} options={{headerShown: false}}/>
-            <Stack.Screen 
-                name="Home" 
-                component={Home} 
-                options={{
-                    headerShown: false,
-                    tabBarLabel : 'Homse',
-                    tabBarIcon : ({ color }) => (
-                         <FontAwesome5 name="home" color={"color"} size={20}/>
-                     )
-                    }}/>
-            <Stack.Screen name="Search" component={Search} options={{headerShown: false}}/>
-            <Stack.Screen name="Mail" component={Mail} options={{headerShown: false}}/>
-
-            <Stack.Screen name="Profile" component={Profile} options={{headerShown: false}}/>
-
-
-
-        
-
-    </Stack.Navigator>
+        // <NavigationContainer>
+            <Stack.Navigator initialRouteName={AuthIn}>    
+                <Stack.Screen name="Splash" component={Splash} options={{headerShown: false}}/>
+                <Stack.Screen name="AuthIn" component={AuthIn} options={{headerShown: false}}/>
+                <Stack.Screen name="AuthUp" component={AuthUp} options={{headerShown: false}}/>
+                <Stack.Screen name="MainApp" component={MainApp} options={{headerShown: false}}/>
+                <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
+                <Stack.Screen name="Search" component={Search} options={{headerShown: false}}/>
+                <Stack.Screen name="Mail" component={Mail} options={{headerShown: false}}/>
+                <Stack.Screen name="Profile" component={Profile} options={{headerShown: false}}/>
+                
+            </Stack.Navigator>
+        // </NavigationContainer>
     )
 }
-// const Drawwer =() =>{
-//     return(
-        
-//     )
-// }
+
 const MainApp =() =>{
     return(
         <Tab.Navigator> 
@@ -49,9 +35,11 @@ const MainApp =() =>{
                         component={Home} 
                         options={{
                         headerShown: true,
+                        // activeColor: 'yellow', 
+                        // inactiveColor: 'green',
                         tabBarLabel : 'Home',
                         tabBarIcon : ({ color }) => (
-                            <FontAwesome5 name="home" color={color} size={20}/>
+                            <FontAwesome5 name="home" color={color} size={20} style={{ color: color }}/>
                         )
                         }}/>
             <Tab.Screen name="Search" 
