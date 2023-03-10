@@ -1,7 +1,7 @@
 # Welcome // Selamat Datang
 Project ini berisi Javascript Expo CLI dengan beberapa tambahan dependencies dari berbagai liblraries.
 
-- Jeremy Perwira 
+Github by Jeremy Perwira 
 
 ## Installation // Instalasi
 Pastikan package sudah lengakap (node_module, package.json, dll).
